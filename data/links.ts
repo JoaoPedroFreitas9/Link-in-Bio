@@ -7,13 +7,7 @@ import {
   FaRegEnvelope,
   FaWhatsapp,
 } from "react-icons/fa6";
-import { FiCode, FiCpu, FiLayers, FiLayout } from "react-icons/fi";
-
-export type ServiceItem = {
-  title: string;
-  description: string;
-  icon: IconType;
-};
+import { FiCpu, FiLayers, FiLayout } from "react-icons/fi";
 
 export type Profile = {
   name: string;
@@ -52,19 +46,14 @@ export type FeaturedProject = {
   noUtm?: boolean;
 };
 
-export const site = {
-  url: "https://seudominio.com",
+export type ServiceItem = {
+  title: string;
+  description: string;
+  icon: IconType;
 };
 
-export const featuredProject: FeaturedProject = {
-  badge: "Projeto em destaque",
-  title: "Marcenaria Freitas",
-  description: "Landing page institucional moderna para fábrica de móveis planejados sob medida.",
-  resultMetric: "Design sob medida, 100% responsivo e alta taxa de conversão",
-  image: "/marcenaria-freitas.jpg",
-  href: "https://marcenaria-freitas.vercel.app/",
-  ctaText: "Visitar site",
-  tags: ["Next.js", "Tailwind CSS", "Vercel"],
+export const site = {
+  url: "https://seudominio.com",
 };
 
 export const profile: Profile = {
@@ -79,60 +68,53 @@ export const profile: Profile = {
 export const socials: SocialLink[] = [
   { label: "Instagram", href: "https://instagram.com/joaopedroz7", icon: FaInstagram },
   { label: "GitHub", href: "https://github.com/JoaoPedroFreitas9", icon: FaGithub },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/jo%C3%A3o-pedro-freitas9/?isSelfProfile=true", icon: FaLinkedinIn },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/jo%C3%A3o-pedro-freitas9/", icon: FaLinkedinIn },
   { label: "WhatsApp", href: "https://wa.me/5538997502338", icon: FaWhatsapp },
   { label: "E-mail", href: "mailto:joaopedrofreitas0901@gmail.com", icon: FaRegEnvelope },
 ];
 
+export const cta: LinkItem = {
+  title: "Vamos conversar no WhatsApp",
+  description: "Orçamento sem compromisso",
+  href: "https://wa.me/5538997502338?text=Ol%C3%A1!%20Vi%20seu%20Instagram%20e%20quero%20um%20or%C3%A7amento.",
+  icon: FaWhatsapp,
+  variant: "primary",
+};
+
+export const featuredProject: FeaturedProject = {
+  badge: "Projeto em destaque",
+  title: "Marcenaria Freitas",
+  description: "Landing page institucional para uma marcenaria de móveis planejados.",
+  resultMetric: "Visual premium, carregamento rápido, pronto para converter",
+  image: "/marcenaria-freitas-top.jpg",
+  href: "https://marcenaria-freitas.vercel.app/",
+  ctaText: "Visitar site",
+  tags: ["Next.js", "Tailwind CSS", "Vercel"],
+};
+
 export const services: ServiceItem[] = [
   {
-    title: "Sites & Landing Pages",
-    description: "Design moderno, carregamento rápido e foco total em conversão.",
+    title: "Sites e landing pages",
+    description: "Rápidos, responsivos e prontos para o Google",
     icon: FiLayout,
   },
   {
-    title: "Sistemas Web sob Medida",
-    description: "Dashboards, painéis de gestão e aplicações completas para o seu negócio.",
+    title: "Sistemas web sob medida",
+    description: "Painéis, dashboards e ferramentas internas",
     icon: FiLayers,
   },
   {
-    title: "Integrações & APIs",
-    description: "Conexões inteligentes com WhatsApp, meios de pagamento e sistemas externos.",
+    title: "Integrações e APIs",
+    description: "WhatsApp, pagamentos e sistemas externos",
     icon: FiCpu,
   },
 ];
 
 export const links: LinkItem[] = [
   {
-    title: "Portfólio",
-    description: "Cases, stack e como eu trabalho",
+    title: "Portfólio e projetos",
+    description: "Cases, apps e sistemas que já entreguei",
     href: "https://seudominio.com",
     icon: FaGlobe,
-    highlight: true,
-  },
-  {
-    title: "Projetos",
-    description: "Apps e sistemas que já entreguei",
-    href: "https://seudominio.com/projetos",
-    icon: FiCode,
-  },
-  {
-    title: "GitHub",
-    description: "Código aberto e experimentos",
-    href: "https://github.com/JoaoPedroFreitas9",
-    icon: FaGithub,
-  },
-  {
-    title: "LinkedIn",
-    description: "Experiência e recomendações",
-    href: "https://linkedin.com/in/joão-pedro-freitas9",
-    icon: FaLinkedinIn,
-  },
-  {
-    title: "Vamos conversar no WhatsApp",
-    description: "Orçamento sem compromisso",
-    href: "https://wa.me/5538997502338?text=Ol%C3%A1!%20Vi%20seu%20Instagram%20e%20quero%20um%20or%C3%A7amento.",
-    icon: FaWhatsapp,
-    variant: "primary",
   },
 ];
