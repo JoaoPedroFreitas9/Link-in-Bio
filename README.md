@@ -63,6 +63,7 @@ link-in-bio/
 │   └── page.tsx                 # Composição da página inicial (Server Component)
 ├── components/
 │   ├── FeaturedProjectCard.tsx  # Card do projeto em destaque com captura de tela
+│   ├── Footer.tsx               # Rodapé discreto com copyright e link rápido
 │   ├── LinkCard.tsx             # Card de link com variantes de destaque
 │   ├── Profile.tsx              # Cabeçalho, avatar e selo de disponibilidade
 │   ├── ServicesSection.tsx      # Card compacto com serviços oferecidos

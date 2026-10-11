@@ -1,4 +1,5 @@
 import { FeaturedProjectCard } from "@/components/FeaturedProjectCard";
+import { Footer } from "@/components/Footer";
 import { LinkCard } from "@/components/LinkCard";
 import { Profile } from "@/components/Profile";
 import { ServicesSection } from "@/components/ServicesSection";
@@ -20,6 +21,7 @@ export default function Home() {
           </li>
         ))}
       </ul>
+      <Footer />
     </main>
   );
 }
