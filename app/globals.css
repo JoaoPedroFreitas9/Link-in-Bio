@@ -30,10 +30,45 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
+@keyframes shimmer {
+  0% {
+    transform: translateX(-160%) skewX(-20deg);
+  }
+  32%, 100% {
+    transform: translateX(280%) skewX(-20deg);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 24s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
     transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }

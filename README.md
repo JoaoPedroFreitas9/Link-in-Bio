@@ -67,7 +67,8 @@ link-in-bio/
 │   ├── LinkCard.tsx             # Card de link com variantes de destaque
 │   ├── Profile.tsx              # Cabeçalho, avatar e selo de disponibilidade
 │   ├── ServicesSection.tsx      # Card compacto com serviços oferecidos
-│   └── SocialRow.tsx            # Linha de botões das redes sociais
+│   ├── SocialRow.tsx            # Linha de botões das redes sociais
+│   └── TechMarquee.tsx          # Carrossel contínuo de tecnologias e ferramentas
 ├── data/
 │   └── links.ts                 # Conteúdo da aplicação tipado e centralizado
 ├── docs/

@@ -1,13 +1,29 @@
 import type { IconType } from "react-icons";
 import {
+  FaDocker,
+  FaGitAlt,
   FaGithub,
   FaGlobe,
   FaInstagram,
   FaLinkedinIn,
+  FaNodeJs,
+  FaReact,
   FaRegEnvelope,
   FaWhatsapp,
 } from "react-icons/fa6";
 import { FiCpu, FiLayers, FiLayout } from "react-icons/fi";
+import {
+  SiNestjs,
+  SiNextdotjs,
+  SiPostgresql,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
+
+export type TechItem = {
+  name: string;
+  icon: IconType;
+};
 
 export type Profile = {
   name: string;
@@ -117,4 +133,16 @@ export const links: LinkItem[] = [
     href: "https://seudominio.com",
     icon: FaGlobe,
   },
+];
+
+export const techStack: TechItem[] = [
+  { name: "Next.js", icon: SiNextdotjs },
+  { name: "React", icon: FaReact },
+  { name: "TypeScript", icon: SiTypescript },
+  { name: "Tailwind CSS", icon: SiTailwindcss },
+  { name: "Node.js", icon: FaNodeJs },
+  { name: "NestJS", icon: SiNestjs },
+  { name: "PostgreSQL", icon: SiPostgresql },
+  { name: "Docker", icon: FaDocker },
+  { name: "Git", icon: FaGitAlt },
 ];

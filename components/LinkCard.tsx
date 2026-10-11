@@ -3,7 +3,7 @@ import type { LinkItem } from "@/data/links";
 import { isExternal, withUtm } from "@/lib/utm";
 
 const base =
-  "group flex items-center gap-4 rounded-xl border p-3 pr-4 transition duration-150 ease-out hover:-translate-y-px focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg";
+  "group relative overflow-hidden flex items-center gap-4 rounded-xl border p-3 pr-4 transition duration-150 ease-out hover:-translate-y-px focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg";
 
 const styles = {
   default: {
@@ -13,7 +13,7 @@ const styles = {
     chevron: "text-muted group-hover:text-accent",
   },
   primary: {
-    card: "border-accent bg-accent text-on-accent hover:brightness-110",
+    card: "border-accent bg-accent text-on-accent shadow-[0_0_20px_rgba(56,189,248,0.3)] hover:shadow-[0_0_28px_rgba(56,189,248,0.45)] hover:brightness-105",
     icon: "bg-on-accent/15 text-on-accent",
     description: "text-on-accent/75",
     chevron: "text-on-accent",
@@ -39,6 +39,14 @@ export function LinkCard({
       {...(external && { target: "_blank", rel: "noopener noreferrer" })}
       className={`${base} ${border} ${s.card}`}
     >
+      {variant === "primary" && (
+        <span
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 overflow-hidden"
+        >
+          <span className="animate-shimmer absolute inset-y-0 w-32 bg-gradient-to-r from-transparent via-white/85 to-transparent blur-[1px]" />
+        </span>
+      )}
       <span
         aria-hidden="true"
         className={`flex size-10 shrink-0 items-center justify-center rounded-lg ${s.icon}`}

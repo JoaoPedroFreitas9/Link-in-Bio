@@ -21,8 +21,18 @@ export function FeaturedProjectCard({
       href={withUtm(href, noUtm)}
       aria-label={`${badge}: ${title} — ${ctaText}`}
       {...(external && { target: "_blank", rel: "noopener noreferrer" })}
-      className="group block rounded-2xl border border-accent/40 bg-card p-3.5 transition duration-150 ease-out hover:-translate-y-px hover:border-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
+      className="group relative overflow-hidden block rounded-2xl border border-accent/40 bg-card p-3.5 transition duration-150 ease-out hover:-translate-y-px hover:border-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
     >
+      {/* Spotlight Glow de Topo */}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute -top-12 left-1/2 -translate-x-1/2 h-24 w-3/4 rounded-full bg-accent/15 blur-2xl transition-all duration-300 group-hover:bg-accent/25"
+      />
+      {/* Feixe de luz na borda superior (Border Beam Spotlight) */}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute -top-px left-1/2 -translate-x-1/2 h-[2px] w-3/5 bg-gradient-to-r from-transparent via-accent to-transparent opacity-90 transition-all duration-300 group-hover:w-4/5 group-hover:opacity-100"
+      />
       <span className="mb-3 flex items-center justify-between gap-2">
         <span className="inline-flex items-center gap-1.5 rounded-full border border-accent/30 bg-accent/10 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-accent">
           <span aria-hidden="true" className="size-1.5 rounded-full bg-accent" />
