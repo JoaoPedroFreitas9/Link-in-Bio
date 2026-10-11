@@ -14,6 +14,8 @@ export type Profile = {
   handle: string;
   headline: string;
   avatar: string;
+  available?: boolean;
+  availableText?: string;
 };
 
 export type SocialLink = {
@@ -41,6 +43,8 @@ export const profile: Profile = {
   handle: "@joaopedroz7",
   headline: "Full Stack Developer",
   avatar: "/avatar-joao.jpg",
+  available: true,
+  availableText: "Disponível para novos projetos",
 };
 
 export const socials: SocialLink[] = [
