@@ -1,85 +1,120 @@
 # Link in Bio
 
-Página de link in bio desenvolvida para o perfil de Instagram. Projetada com foco em alta performance no navegador interno do Instagram, carregamento instantâneo, experiência mobile-first e conversão de visitantes em potenciais clientes.
+Página de links para perfil do Instagram, desenvolvida com Next.js, TypeScript e Tailwind CSS. O projeto reúne informações de perfil, redes sociais, serviços, projetos e canais de contato em uma única página, com interface adaptada para dispositivos móveis.
 
 ## Demonstração
 
-Aplicação em produção: [https://joaopedrobio.vercel.app/](https://joaopedrobio.vercel.app/)
+**Aplicação em produção:** [joaopedrobio.vercel.app](https://joaopedrobio.vercel.app/)
 
-![Preview](docs/preview.png)
+![Preview](docs/image.png)
 
 ## Funcionalidades
 
-- **Arquitetura mobile-first:** layout otimizado para celulares e navegadores in-app, garantindo renderização rápida e baixo consumo de dados.
-- **Tema escuro profissional:** paleta com fundo preto puro e acento ciano/sky blue, totalmente configurável via variáveis CSS.
-- **Dados centralizados:** perfil, redes sociais, serviços e links gerenciados em um único arquivo TypeScript tipado.
-- **Rastreamento UTM automático:** utilitário que injeta parâmetros de campanha (`utm_source`, `utm_medium`, `utm_campaign`) em links externos, preservando links diretos de WhatsApp e e-mail.
-- **SEO e compartilhamento:** metadados Open Graph e Twitter Cards configurados para prévias ricas em qualquer plataforma.
-- **Acessibilidade e semântica:** estrutura com tags HTML5 semânticas, foco visível para navegação por teclado e descrições para leitores de tela.
+- **Layout responsivo:** interface mobile-first, adaptada a diferentes tamanhos de tela e ao uso em navegadores integrados a aplicativos.
+- **Conteúdo centralizado:** informações do perfil, serviços, redes sociais e links organizados em um único arquivo TypeScript.
+- **Parâmetros UTM:** inclusão automática de parâmetros de campanha em links externos compatíveis, facilitando a identificação da origem dos acessos.
+- **Metadados para compartilhamento:** configuração de Open Graph e Twitter Cards para exibição de informações da página ao compartilhar o link.
+- **Acessibilidade:** uso de elementos HTML semânticos, indicadores de foco e descrições acessíveis para componentes relevantes.
+- **Personalização visual:** cores e elementos do tema configurados por variáveis CSS.
+- **Componentização:** interface dividida em componentes reutilizáveis, facilitando a manutenção e a evolução do projeto.
 
 ## Tecnologias
 
-- **Next.js** (App Router e Server Components)
-- **TypeScript**
-- **Tailwind CSS**
-- **react-icons**
-- **Vercel** (hospedagem e deploy contínuo)
+| Tecnologia | Aplicação |
+|---|---|
+| Next.js | Estrutura da aplicação com App Router |
+| TypeScript | Tipagem estática e organização dos dados |
+| Tailwind CSS | Estilização da interface |
+| React Icons | Ícones de redes sociais e elementos da interface |
+| Vercel | Hospedagem e integração com o fluxo de deploy |
 
-## Como rodar localmente
+## Executando o projeto
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/JoaoPedroFreitas9/Link-in-Bio.git
-   cd Link-in-Bio
-   ```
+### Requisitos
 
-2. Instale as dependências:
-   ```bash
-   npm install
-   ```
+- Node.js em uma versão compatível com o Next.js utilizado no projeto.
+- npm.
 
-3. Inicie o servidor local:
-   ```bash
-   npm run dev
-   ```
+### Instalação
 
-4. Acesse no navegador:
-   ```
-   http://localhost:3000
-   ```
+Clone o repositório e acesse o diretório:
 
-## Como personalizar
+```bash
+git clone https://github.com/JoaoPedroFreitas9/Link-in-Bio.git
+cd Link-in-Bio
+```
 
-- **Informações e links:** atualize o arquivo `data/links.ts` para modificar os dados do perfil, serviços oferecidos, projeto em destaque e links de contato.
-- **Cores e estilo:** ajuste as variáveis no seletor `:root` em `app/globals.css` (`--bg`, `--card`, `--border`, `--fg`, `--muted`, `--accent`, `--on-accent`).
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Inicie o servidor de desenvolvimento:
+
+```bash
+npm run dev
+```
+
+Acesse a aplicação em [http://localhost:3000](http://localhost:3000).
+
+## Personalização
+
+### Informações e links
+
+Edite o arquivo `data/links.ts` para atualizar os dados do perfil, as redes sociais, os serviços, o projeto em destaque e os canais de contato.
+
+### Identidade visual
+
+As variáveis de tema estão definidas em `app/globals.css`, no seletor `:root`.
+
+As principais variáveis são:
+
+- `--bg`: cor de fundo.
+- `--card`: fundo dos cards.
+- `--border`: cor das bordas.
+- `--fg`: cor principal do texto.
+- `--muted`: cor dos textos secundários.
+- `--accent`: cor de destaque.
+- `--on-accent`: cor do conteúdo sobre elementos destacados.
 
 ## Estrutura do projeto
 
-```
+```text
 link-in-bio/
 ├── app/
-│   ├── globals.css              # Variáveis CSS e tokens de design
-│   ├── layout.tsx               # Layout raiz, fontes e metadados SEO/OG
-│   └── page.tsx                 # Composição da página inicial (Server Component)
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
 ├── components/
-│   ├── FeaturedProjectCard.tsx  # Card do projeto em destaque com captura de tela
-│   ├── Footer.tsx               # Rodapé discreto com copyright e link rápido
-│   ├── LinkCard.tsx             # Card de link com variantes de destaque
-│   ├── Profile.tsx              # Cabeçalho, avatar e selo de disponibilidade
-│   ├── ServicesSection.tsx      # Card compacto com serviços oferecidos
-│   ├── SocialRow.tsx            # Linha de botões das redes sociais
-│   └── TechMarquee.tsx          # Carrossel contínuo de tecnologias e ferramentas
+│   ├── FeaturedProjectCard.tsx
+│   ├── Footer.tsx
+│   ├── LinkCard.tsx
+│   ├── Profile.tsx
+│   ├── ServicesSection.tsx
+│   ├── SocialRow.tsx
+│   └── TechMarquee.tsx
 ├── data/
-│   └── links.ts                 # Conteúdo da aplicação tipado e centralizado
+│   └── links.ts
 ├── docs/
-│   └── preview.png              # Imagem de demonstração para a documentação
+│   └── preview.png
 ├── lib/
-│   └── utm.ts                   # Utilitário para inclusão de parâmetros UTM
-└── public/                      # Imagens otimizadas e arquivos públicos
+│   └── utm.ts
+└── public/
 ```
+
+### Organização dos diretórios
+
+- `app/`: páginas, layout raiz, metadados e estilos globais.
+- `components/`: componentes responsáveis pelas diferentes seções da interface.
+- `data/`: dados centralizados da aplicação.
+- `docs/`: imagens utilizadas na documentação.
+- `lib/`: funções utilitárias.
+- `public/`: arquivos estáticos disponibilizados pela aplicação.
 
 ## Autor
 
-João Pedro Freitas
-- GitHub: [https://github.com/JoaoPedroFreitas9](https://github.com/JoaoPedroFreitas9)
-- LinkedIn: [https://www.linkedin.com/in/jo%C3%A3o-pedro-freitas9/](https://www.linkedin.com/in/jo%C3%A3o-pedro-freitas9/)
+**João Pedro Freitas**
+
+- GitHub: [JoaoPedroFreitas9](https://github.com/JoaoPedroFreitas9)
+- LinkedIn: [João Pedro Freitas](https://www.linkedin.com/in/jo%C3%A3o-pedro-freitas9/)
