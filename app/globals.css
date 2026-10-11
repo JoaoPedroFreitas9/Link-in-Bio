@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #0f0d0b;
-  --card: #1a1613;
-  --border: #2e2721;
-  --fg: #f5efe8;
-  --muted: #968a7d;
-  --accent: #f59e0b;
-  --on-accent: #0f0d0b;
+  --bg: #000000;
+  --card: #111113;
+  --border: #222226;
+  --fg: #f4f4f6;
+  --muted: #94a3b8;
+  --accent: #38bdf8;
+  --on-accent: #000000;
 
   color-scheme: dark;
 }
@@ -26,11 +26,6 @@
 
 body {
   background-color: var(--bg);
-  background-image: radial-gradient(
-    color-mix(in srgb, var(--border) 55%, transparent) 1px,
-    transparent 1px
-  );
-  background-size: 22px 22px;
   color: var(--fg);
   -webkit-tap-highlight-color: transparent;
 }
