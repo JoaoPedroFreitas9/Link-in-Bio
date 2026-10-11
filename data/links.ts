@@ -34,8 +34,31 @@ export type LinkItem = {
   noUtm?: boolean;
 };
 
+export type FeaturedProject = {
+  badge?: string;
+  title: string;
+  description: string;
+  resultMetric: string;
+  image: string;
+  href: string;
+  ctaText?: string;
+  tags?: string[];
+  noUtm?: boolean;
+};
+
 export const site = {
   url: "https://seudominio.com",
+};
+
+export const featuredProject: FeaturedProject = {
+  badge: "Projeto em destaque",
+  title: "Marcenaria Freitas",
+  description: "Landing page institucional moderna para fábrica de móveis planejados sob medida.",
+  resultMetric: "Design sob medida, 100% responsivo e alta taxa de conversão",
+  image: "/marcenaria-freitas.jpg",
+  href: "https://marcenaria-freitas.vercel.app/",
+  ctaText: "Visitar site",
+  tags: ["Next.js", "Tailwind CSS", "Vercel"],
 };
 
 export const profile: Profile = {
