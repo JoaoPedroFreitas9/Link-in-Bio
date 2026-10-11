@@ -1,20 +1,21 @@
 # Link in Bio
 
-Página de link in bio otimizada para o Instagram de um desenvolvedor full stack freelancer, focada em carregamento rápido, boa experiência mobile e conversão de novos projetos.
+Página de link in bio desenvolvida para o perfil de Instagram. Projetada com foco em alta performance no navegador interno do Instagram, carregamento instantâneo, experiência mobile-first e conversão de visitantes em potenciais clientes.
 
 ## Demonstração
 
-Acesse a versão em produção: [https://joaopedrobio.vercel.app/](https://joaopedrobio.vercel.app/)
+Aplicação em produção: [https://joaopedrobio.vercel.app/](https://joaopedrobio.vercel.app/)
 
 ![Preview](docs/preview.png)
 
 ## Funcionalidades
 
-- **Mobile-first:** desenvolvido e otimizado para o navegador interno do Instagram e dispositivos móveis.
-- **Tema escuro:** design em tons escuros e acento customizável via CSS Variables.
-- **Gerenciamento centralizado:** todo o conteúdo (perfil, serviços, projetos e links) é editado em um único arquivo de dados tipado.
-- **UTM automático:** utilitário que anexa parâmetros UTM de rastreamento para links externos, ignorando contatos diretos (WhatsApp e e-mail).
-- **SEO e Open Graph:** metadados completos configurados para indexação e compartilhamento em redes sociais.
+- **Arquitetura mobile-first:** layout otimizado para celulares e navegadores in-app, garantindo renderização rápida e baixo consumo de dados.
+- **Tema escuro profissional:** paleta com fundo preto puro e acento ciano/sky blue, totalmente configurável via variáveis CSS.
+- **Dados centralizados:** perfil, redes sociais, serviços e links gerenciados em um único arquivo TypeScript tipado.
+- **Rastreamento UTM automático:** utilitário que injeta parâmetros de campanha (`utm_source`, `utm_medium`, `utm_campaign`) em links externos, preservando links diretos de WhatsApp e e-mail.
+- **SEO e compartilhamento:** metadados Open Graph e Twitter Cards configurados para prévias ricas em qualquer plataforma.
+- **Acessibilidade e semântica:** estrutura com tags HTML5 semânticas, foco visível para navegação por teclado e descrições para leitores de tela.
 
 ## Tecnologias
 
@@ -22,7 +23,7 @@ Acesse a versão em produção: [https://joaopedrobio.vercel.app/](https://joaop
 - **TypeScript**
 - **Tailwind CSS**
 - **react-icons**
-- **Deploy:** Vercel
+- **Vercel** (hospedagem e deploy contínuo)
 
 ## Como rodar localmente
 
@@ -37,42 +38,42 @@ Acesse a versão em produção: [https://joaopedrobio.vercel.app/](https://joaop
    npm install
    ```
 
-3. Inicie o servidor de desenvolvimento:
+3. Inicie o servidor local:
    ```bash
    npm run dev
    ```
 
-4. Abra no navegador:
+4. Acesse no navegador:
    ```
    http://localhost:3000
    ```
 
 ## Como personalizar
 
-- **Conteúdo e links:** edite o arquivo `data/links.ts` para alterar informações do perfil, redes sociais, serviços e links de projetos.
-- **Cores e tema:** modifique as variáveis CSS declaradas no bloco `:root` em `app/globals.css` (`--bg`, `--card`, `--border`, `--fg`, `--muted`, `--accent`, `--on-accent`).
+- **Informações e links:** atualize o arquivo `data/links.ts` para modificar os dados do perfil, serviços oferecidos, projeto em destaque e links de contato.
+- **Cores e estilo:** ajuste as variáveis no seletor `:root` em `app/globals.css` (`--bg`, `--card`, `--border`, `--fg`, `--muted`, `--accent`, `--on-accent`).
 
 ## Estrutura do projeto
 
 ```
 link-in-bio/
 ├── app/
-│   ├── globals.css          # Variáveis CSS e tokens de design
-│   ├── layout.tsx           # Layout raiz, fontes e metadados SEO/Open Graph
-│   └── page.tsx             # Composição da página inicial (Server Component)
+│   ├── globals.css              # Variáveis CSS e tokens de design
+│   ├── layout.tsx               # Layout raiz, fontes e metadados SEO/OG
+│   └── page.tsx                 # Composição da página inicial (Server Component)
 ├── components/
-│   ├── FeaturedProjectCard.tsx  # Card do projeto em destaque com preview
-│   ├── LinkCard.tsx             # Card de link com variantes
-│   ├── Profile.tsx              # Cabeçalho de perfil e badge de disponibilidade
-│   ├── ServicesSection.tsx      # Seção compacta de serviços oferecidos
-│   └── SocialRow.tsx            # Barra de botões das redes sociais
+│   ├── FeaturedProjectCard.tsx  # Card do projeto em destaque com captura de tela
+│   ├── LinkCard.tsx             # Card de link com variantes de destaque
+│   ├── Profile.tsx              # Cabeçalho, avatar e selo de disponibilidade
+│   ├── ServicesSection.tsx      # Card compacto com serviços oferecidos
+│   └── SocialRow.tsx            # Linha de botões das redes sociais
 ├── data/
-│   └── links.ts             # Dados centralizados e tipados da aplicação
+│   └── links.ts                 # Conteúdo da aplicação tipado e centralizado
 ├── docs/
-│   └── preview.png          # Imagem de demonstração do layout
+│   └── preview.png              # Imagem de demonstração para a documentação
 ├── lib/
-│   └── utm.ts               # Função utilitária para inclusão de parâmetros UTM
-└── public/                  # Arquivos estáticos e imagens otimizadas
+│   └── utm.ts                   # Utilitário para inclusão de parâmetros UTM
+└── public/                      # Imagens otimizadas e arquivos públicos
 ```
 
 ## Autor
