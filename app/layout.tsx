@@ -15,7 +15,8 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-const title = `${profile.name} · ${profile.handle}`;
+
+const title = `${profile.name} - ${profile.headline}`;
 const description = profile.headline;
 
 export const metadata: Metadata = {
@@ -23,6 +24,16 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: "/" },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/apple-icon.png", type: "image/png", sizes: "180x180" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
   openGraph: {
     type: "profile",
     locale: "pt_BR",
